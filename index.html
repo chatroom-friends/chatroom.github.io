@@ -1,0 +1,106 @@
+
+<!doctype html>
+<link rel="icon" href="https://cdn.discordapp.com/attachments/888502608266932355/1035939779210137620/unknown.png">
+<body>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css">
+  <link href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" rel="stylesheet">
+</body>
+<div class="navbar">
+    <div class="icon"><a href="home.html"><i class="fa-solid fa-house"></i></a></div>
+    <div class="icon"><a href="index.html"><i class="fa-solid fa-comment"></i></a></div>
+</div>
+<style>
+    
+.navbar {
+	position: fixed;
+	bottom: 1.5em;
+	right: 50%;
+	transform: translateX(50%);
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 30rem;
+	background: white;
+	padding: 15px;
+	gap: 1.3em;
+}
+
+.icon {
+	font-size: 23px;
+	color: gray;
+	cursor: pointer;
+	padding: 3px;
+}
+
+
+@media only screen and (max-width: 500px), (max-width: 600px), (max-width: 700px), (max-width: 800px) {
+
+.navbar {
+	width: 45%;
+	padding: 15px;
+}
+	
+}
+</style>
+	
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Some random shits Natasquare made.">
+        <meta name="keywords" content="chatroom">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#8bb6de">
+        <meta property="og:site_name" content="chatroom">
+        <title>Login</title>
+        <link rel="icon" href="https://cdn.discordapp.com/attachments/888502608266932355/1035939779210137620/unknown.png">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="login-area">
+                <div class="row">
+                    <div class="large-7 medium-7 small-12 columns small-centered">
+                        <form id="login-form">
+                            <h2>Login</h2>
+                            <p id="error-msg"></p>
+                            <input type="text" name="username" placeholder="Enter your name" autocomplete="off">
+                            <input type="text" name="room" placeholder="Enter a room code" autocomplete="off">
+                            <input type="submit" value="Connect">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="message-area">
+                <div class="large-8 columns small-centered">
+                    <h2>Happy Halloween</h2>
+                    <div class="chat-wrap">
+                        <div class="top">
+                            <h5 class="room-title"></h5>
+                        </div>
+                        <div id="messages">
+                        </div>
+                        <form id="message-form">
+                            <div class="input-group">
+                                <textarea rows="1" placeholder="Enter your message" class="input-group-field" name="message" autocomplete="off" id="textarea"></textarea>
+                                <div class="input-group-button">
+                                    <input type="submit" value="Send">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/jquery.js"></script>
+        <script src="/js/socket.io-1.7.3.min.js"></script>
+        <script src="/js/moment.min.js"></script>
+        <script src="/js/app.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script type="text/javascript">$(document).foundation()</script>
+    </body>
+</html>
